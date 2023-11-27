@@ -1,0 +1,25 @@
+<!-- assembly.xml -->
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+<id>timechartfx</id>
+<formats>
+	<format>jar</format>
+</formats>
+<includeBaseDirectory>false</includeBaseDirectory>
+<dependencySets>
+	<dependencySet>
+		<!--<includes>
+			<include>pvittet.quilchart:0.1.0-SNAPSHOT</include>
+			<include>pvittet.processing-core:3.5.3-SNAPSHOT</include>
+		</includes>-->
+		<excludes>
+			<exclude>org.openjfx:*</exclude>
+		</excludes>
+		<outputDirectory>/</outputDirectory>
+		<useProjectArtifact>true</useProjectArtifact>
+		<unpack>true</unpack>
+		<scope>runtime</scope>
+	</dependencySet>
+</dependencySets>
+</assembly>
